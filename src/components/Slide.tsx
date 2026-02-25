@@ -125,6 +125,77 @@ export default function Slide({ slide, isActive, printMode = false }: SlideProps
       );
     }
 
+    // Slide 13: 60-Day Execution & Cost
+    if (slide.id === 13) {
+      const CalendarIcon = IconMap.Calendar;
+      const CreditCardIcon = IconMap.CreditCard;
+      const LayersIcon = IconMap.Layers;
+      const TargetIcon = IconMap.Target;
+
+      return (
+        <div className="relative w-full h-full flex flex-col md:flex-row gap-4 p-4 overflow-hidden">
+           {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={`https://picsum.photos/seed/${slide.imageSeed}/800/600?grayscale&blur=2`} 
+              alt="Visual Blueprint Background" 
+              className="w-full h-full object-cover opacity-10"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+
+          {/* Left: Timeline */}
+          <div className="flex-[1.5] bg-indigo-900/40 border border-indigo-500/30 rounded-xl p-4 flex flex-col gap-3 z-10 backdrop-blur-sm overflow-y-auto">
+            <div className="flex items-center gap-2 mb-2">
+              <CalendarIcon size={16} className="text-indigo-400" />
+              <div className="text-indigo-400 font-mono text-xs uppercase tracking-widest">60-Day Timeline</div>
+            </div>
+            
+            {[
+              { phase: "Phase 1 (Days 1-7)", title: "Research & Structure", desc: "Competitor analysis, Keyword mapping, Site blueprint." },
+              { phase: "Phase 2 (Days 8-30)", title: "Build & Publish", desc: "Dev, 40-60 pages, Schema, Tracking setup." },
+              { phase: "Phase 3 (Days 31-45)", title: "Authority & Opt.", desc: "Citations, On-page optimization, Speed tuning." },
+              { phase: "Phase 4 (Days 46-60)", title: "Ranking Push", desc: "Supporting pages, CTR opt, Outreach prep." }
+            ].map((item, i) => (
+              <div key={i} className="bg-indigo-950/60 p-3 rounded-lg border border-indigo-500/20 relative">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500/50 rounded-l-lg" />
+                <div className="text-xs font-mono text-indigo-300 mb-1">{item.phase}</div>
+                <div className="text-sm font-bold text-white mb-1">{item.title}</div>
+                <div className="text-xs text-indigo-200/70 leading-tight">{item.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right: Budget */}
+          <div className="flex-1 bg-emerald-900/40 border border-emerald-500/30 rounded-xl p-4 flex flex-col gap-4 z-10 backdrop-blur-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <CreditCardIcon size={16} className="text-emerald-400" />
+              <div className="text-emerald-400 font-mono text-xs uppercase tracking-widest">Budget Allocation</div>
+            </div>
+
+            <div className="space-y-3 flex-1">
+              {[
+                { label: "Content Writing", val: "$600" },
+                { label: "Citations / Listings", val: "$150" },
+                { label: "Semrush (1 Mo)", val: "$129" },
+                { label: "Domain + Hosting", val: "$100" }
+              ].map((item, i) => (
+                <div key={i} className="flex justify-between items-center border-b border-emerald-500/10 pb-2 last:border-0">
+                  <span className="text-sm text-emerald-100/80">{item.label}</span>
+                  <span className="text-sm font-mono font-bold text-emerald-400">{item.val}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-emerald-950/80 p-4 rounded-lg border border-emerald-500/30 text-center mt-auto">
+              <div className="text-xs text-emerald-400 uppercase tracking-widest mb-1">Total Estimate</div>
+              <div className="text-3xl font-bold text-white">~$979</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     // Default Visual
     return (
       <div className="relative bg-slate-900/80 backdrop-blur-sm border border-white/10 rounded-2xl p-8 aspect-[4/3] flex flex-col items-center justify-center text-center space-y-6 w-full h-full overflow-hidden">

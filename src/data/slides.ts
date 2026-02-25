@@ -107,7 +107,7 @@ export const slides: SlideData[] = [
     title: "Operational Division of Labor",
     visualBlueprint: "Two distinct columns or lanes. Left Lane: Code, SEO, Server. Right Lane: Phone, CRM, Handshake.",
     bullets: [
-      "Vincent's Role (Tech): 100% of funding, development, SEO, and maintenance.",
+      "Vincent's Role (Tech): 100% of development, SEO, and maintenance.",
       "Partner's Role (Growth): 100% of US-based sales, client onboarding, and retention.",
       "Frictionless handoff: I generate the asset; you monetize it."
     ],
@@ -166,5 +166,18 @@ export const slides: SlideData[] = [
     powerLine: "The only missing variable is your handshake.",
     iconName: "CheckCircle",
     imageSeed: "success"
+  },
+  {
+    id: 13,
+    title: "60-Day Execution & Investment",
+    visualBlueprint: "A split view: Left side showing a 4-phase timeline (Research, Build, Authority, Push). Right side showing a budget breakdown card ($979 Total).",
+    bullets: [
+      "Phase 1-2 (Days 1-30): Launch 40-60 high-quality pages with strict silo architecture.",
+      "Phase 3-4 (Days 31-60): Aggressive citation building and ranking push.",
+      "Investment: ~$1,000 allocation for tools, hosting, and content (Labor is internal)."
+    ],
+    powerLine: "Validate the model with measurable traffic in 60 days.",
+    iconName: "Calendar",
+    imageSeed: "calendar"
   }
 ];

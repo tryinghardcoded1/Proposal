@@ -21,7 +21,11 @@ import {
   User,
   Rocket,
   Scale,
-  Info
+  Info,
+  Calendar,
+  CreditCard,
+  Layers,
+  Target
 } from 'lucide-react';
 
 export const IconMap: Record<string, any> = {
@@ -47,5 +51,9 @@ export const IconMap: Record<string, any> = {
   User,
   Rocket,
   Scale,
-  Info
+  Info,
+  Calendar,
+  CreditCard,
+  Layers,
+  Target
 };
